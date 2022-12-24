@@ -1,16 +1,17 @@
 import { Button, Card, Grid, Typography } from '@mui/material'
 import React from 'react'
+import logo from '../media/logo.jpeg'
 
 export default function Products() {
     return (
         <div>
-            <div className="header">
-                <Typography variant="h2" mt={2} mb={2}><b>Baby</b>Tesla.in</Typography>
+            <div className="header" style={{ display: "inline-flex", marginTop: '10px' }}>
+                <img src={logo} alt="logo" style={{ height: '80px', margin: '8px' }} /><Typography variant="h2" mt={2} mb={2}><b>Baby</b>Tesla.in</Typography>
             </div>
 
             <div className="header w3-animate-bottom" style={{ margin: "5%" }}>
                 <div className="header">
-                    <Typography variant="h4" style={{ marginTop: '20px' }}>Our Products</Typography>
+                    <Typography variant="h4">Our Products</Typography>
                 </div>
                 <Grid container spacing={2} style={{ marginTop: '20px' }}>
                     <Grid xs={4}>
@@ -78,7 +79,10 @@ export default function Products() {
                         </Card>
                     </Grid>
                 </Grid>
+
+                <Button variant='contained' style={{ borderRadius: '25px', margin: '6px', marginTop: '30px', backgroundColor: 'gray' }} onClick={(e) => window.location = "/"}>Back</Button>
+
             </div>
-        </div>
+        </div >
     )
 }
